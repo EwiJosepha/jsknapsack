@@ -44,9 +44,10 @@ body {
 }
 
 .flex {
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 50%;
   /* height: 500px; */
   background-color: #f0f8ff;
   border: 1px solid #fff;
