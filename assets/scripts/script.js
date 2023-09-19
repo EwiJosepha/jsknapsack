@@ -19,45 +19,78 @@ let maise= document.getElementById('maise')
 let sugar= document.getElementById('sugar')
 let spaghetti= document.getElementById('spaghetti')
 let btn= document.getElementById('btn')
+let display= document.getElementById('output')
+let output = document.createElement('p')
+
+// display.append(output)
+// function input () {
+//   const inputfield= document.getElementById("input-field").value
+
+//   console.log(inputfield)
+// }
+
+let selectIterms = document.getElementById("selectIterms")
+
+// btn.addEventListener('click', input)
+
+let provision = [  
+  {
+  Item: "Salt",
+  Weight: 10,
+  value: 3500
+  },
+  {
+    Item: "butter",
+    Weight: 15,
+    value: 3500
+    }
+]
+
+const selectedIterms = []
+const addedWieght = 0
+
+selectIterms.innerHTML = provision.map((item) => `<option value=${item.Weight}>${item.Item} ${item.Weight}Kg ${item.value}frs </option>`)
 
 
-function input () {
-  const inputfield= document.getElementById("input-field").value
-
-  console.log(inputfield)
-}
-
-btn.addEventListener('click', input)
-
-let items = []
-
-function items () {
-  rice + tomatoes + garri + milk
-}
+selectIterms.addEventListener("change", (event)=> console.log("item value: ", event.target.value))
 
 
 
-// egusi = 5
-// cheese = 8
-// butter = 4
-// parfumRice = 5
-// spaghetti = 4
-// rice = 25
-// salt = 10
-// mayor = 8
-// oil = 5
-// milk = 6 
-// maise = 4
-// grandnut = 9
-// meat = 8
-// fish = 13
-// sugar = 3
-// onoin = 4
-// cotton = 50
-// garri = 7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 butter.addEventListener("click", ()=>{
-  butter = 4
+ 
+  selectedIterms.push(provision[0])
+  addedWieght = addedWieght + 4
+  butter = 4 + "kg"
+  output.innerHTML = butter
+  output.style.backgroundColor = "blue"
+  output.style.fontSize = "25px"
   console.log(butter)
 })
 
@@ -77,8 +110,12 @@ tomatoes.addEventListener("click", ()=>{
 })
 
 rice.addEventListener("click", ()=>{
-  rice = 25  
-  console.log(rice)
+  output.innerHTML = (`${provision[0].item}`)
+  output.innerHTML = (`${provision[0].weigth}`)
+  output.innerHTML = (`${provision[0].item} <br> ${provision[0].weigth} <br> ${provision[0].value} `)
+   
+  // rice = 25  
+  // console.log(rice)
 })
 
 beans.addEventListener("click", ()=>{
@@ -151,3 +188,5 @@ salt.addEventListener("click", ()=>{
   salt = 10  
   console.log(salt)
 })
+
+*/
