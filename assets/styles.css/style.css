@@ -11,6 +11,13 @@ body {
   background-color: #fffffd;
 }
 
+h1 {
+  padding: 30px;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #767070;
+}
+
 .main-wrapper {
   display: flex;
   flex-direction: column;
