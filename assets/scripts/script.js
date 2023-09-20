@@ -155,6 +155,8 @@ done.addEventListener('click', ()=>{
 
 const knapsackIterms = [];
 let addedWieght = 0;
+let arrForitemSelected = []
+
 
 // selectIterms.innerHTML = provision.map((item) => `<option ${item.Weight} ${item.Item} ${item.Weight}Kg ${item.value}</option>`)
 // console.log(provision.map)
@@ -182,27 +184,26 @@ addedWieght = addedWieght + itemSelected.Weight
 
 // display the added weigth
 selectedWeigth.innerText = addedWieght
-let newcase = `<p>${itemSelected.Item} ${itemSelected.Weight}kg ${itemSelected.value}</p>
+let itemSelected2 = `<p>${itemSelected.Item} ${itemSelected.Weight}kg ${itemSelected.value}</p>
 `
-let cases = []
+arrForitemSelected.push(itemSelected2)
 
+display.innerHTML = arrForitemSelected
 
-for(i=0; i<=newcase; i++){
-  cases.push(newcase[i])
-  console.log(newcase[i]);
-}
-display.innerHTML = cases
-console.log(cases)
-
-console.log(newcase)
-
-  
- 
-// console.log(cases);
-
-// display.innerHTML = cases
+// document.getElementById("knapsackitems").innerHTML = knapsackIterms.map((itemSelected)=> {
+//   return `<p>${itemSelected.Item} ${itemSelected.Weight}kg ${itemSelected.value}</p>
+//   
+// });
 
 console.log("added items", knapsackIterms) 
+
 console.log(" selectect weight", event.target.value);
-});
+
+})
+
+
+
+
+
+
 
