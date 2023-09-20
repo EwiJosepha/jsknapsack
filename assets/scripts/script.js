@@ -156,7 +156,7 @@ const displayWeight = document.getElementById('weightdisplay')
 function inputt() {
   const input = document.getElementById("input-field").value;
 
-  displayWeight.innerHTML = input
+  displayWeight.innerHTML = 'THIS IS YOUR MAX-WEIGHT' + ' '+ input + 'Kg'
   if (input === "") {
     selectIterms = [];
     console.log("enter a max weight");
@@ -175,7 +175,7 @@ function inputt() {
 
 
   }else{
-    p.innerHTML= 'THIS IS YOUR CURRENT CAPACITY' + ' ' + addedWieght + 'kg'
+    p.innerHTML= 'THIS IS THE CAPACITY OF YOUR KNAPSACK' + ' ' + addedWieght + 'kg'
     p.style.color = 'green'
     p.style.fontSize = '25px'
     p.style.fontFamily = '25px'
