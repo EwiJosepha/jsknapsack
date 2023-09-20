@@ -29,9 +29,8 @@ let output = document.createElement("p");
 //   console.log(inputfield)
 // }
 
-let selectIterms = document.getElementById("selectIterms");
+// let selectIterms = document.getElementById("selectIterms");
 
-// btn.addEventListener('click', input)
 
 let provision = [
   {
@@ -144,17 +143,15 @@ function input() {
     selectIterms = [];
     console.log("enter a max weight");
     display.innerHTML = "enter max weight first";
-  } else {
-    display.innerHTML = displayer();
-    console.log(selectIterms);
-  }
+  } 
 }
 
-// done.addEventListener('click', ()=>{
-//   input()
-//     displayer()
+// btn.addEventListener('click', input)
 
-// })
+
+done.addEventListener('click', ()=>{
+  input()
+})
 
 const knapsackIterms = [];
 let addedWieght = 0;
@@ -185,120 +182,27 @@ addedWieght = addedWieght + itemSelected.Weight
 
 // display the added weigth
 selectedWeigth.innerText = addedWieght
+let newcase = `<p>${itemSelected.Item} ${itemSelected.Weight}kg ${itemSelected.value}</p>
+`
+let cases = []
 
 
+for(i=0; i<=newcase; i++){
+  cases.push(newcase[i])
+  console.log(newcase[i]);
+}
+display.innerHTML = cases
+console.log(cases)
 
+console.log(newcase)
 
-  console.log("added items", knapsackIterms);
-  console.log(" selectect weight", event.target.value);
+  
+ 
+// console.log(cases);
+
+// display.innerHTML = cases
+
+console.log("added items", knapsackIterms) 
+console.log(" selectect weight", event.target.value);
 });
 
-/*
-
-butter.addEventListener("click", ()=>{
- 
-  selectedIterms.push(provision[0])
-  addedWieght = addedWieght + 4
-  butter = 4 + "kg"
-  output.innerHTML = butter
-  output.style.backgroundColor = "blue"
-  output.style.fontSize = "25px"
-  console.log(butter)
-})
-
-egusi.addEventListener("click", ()=>{
-  egusi = 5
-  console.log(egusi)
-})
-
-cheese.addEventListener("click", ()=>{
-  cheese = 8
-  console.log(cheese)
-})
-
-tomatoes.addEventListener("click", ()=>{
-  tomatoes = 7  
-  console.log(tomatoes)
-})
-
-rice.addEventListener("click", ()=>{
-  output.innerHTML = (`${provision[0].item}`)
-  output.innerHTML = (`${provision[0].weigth}`)
-  output.innerHTML = (`${provision[0].item} <br> ${provision[0].weigth} <br> ${provision[0].value} `)
-   
-  // rice = 25  
-  // console.log(rice)
-})
-
-beans.addEventListener("click", ()=>{
-  beans = 5  
-  console.log(beans)
-})
-
-garri.addEventListener("click", ()=>{
-  garri = 7  
-  console.log(garri)
-})
-
-oil.addEventListener("click", ()=>{
-  oil = 5  
-  console.log(oil)
-})
-
-mayor.addEventListener("click", ()=>{
-  mayor = 8  
-  console.log(mayor)
-})
-
-grandnut.addEventListener("click", ()=>{
-  grandnut = 9  
-  console.log(grandnut)
-})
-
-cotton.addEventListener("click", ()=>{
-  cotton = 50  
-  console.log(cotton)
-})
-meat.addEventListener("click", ()=>{
-  meat = 8  
-  console.log(meat)
-})
-fish.addEventListener("click", ()=>{
-  fish = 13  
-  console.log(fish)
-})
-sugar.addEventListener("click", ()=>{
-  sugar = 3  
-  console.log(sugar)
-})
-onoin.addEventListener("click", ()=>{
-  onoin = 4  
-  console.log(onoin)
-})
-
-milk.addEventListener("click", ()=>{
-  milk = 4  
-  console.log(milk)
-})
-
-spaghetti.addEventListener("click", ()=>{
-  spaghetti = 4  
-  console.log(spaghetti)
-})
-
-parfumRice.addEventListener("click", ()=>{
-  parfumRice = 5  
-  console.log(parfumRice)
-})
-
-maise.addEventListener("click", ()=>{
-  maise = 6  
-  console.log(maise)
-})
-
-salt.addEventListener("click", ()=>{
-  salt = 10  
-  console.log(salt)
-})
-
-*/
