@@ -133,18 +133,21 @@ flex.append(p)
 const displayWeight = document.getElementById('weightdisplay')
 let input = document.getElementById('input-field').value
 
-function inputt() {
+function inputt () {
   const input = document.getElementById('input-field').value;
 
   // addedWieght = ' '
+
   if (input === '') {
-    // selectIterms = [];
+
+    // selectIterms = []
+
     console.log('enter a max weight')
     display.innerHTML = 'enter max weight first'
     return
   }
 
-  finish.addEventListener('click', function updating() {
+  finish.addEventListener('click', function updating () {
     if (addedWieght > input) {
       finish.style.backgroundColor = 'red'
       div.innerHTML = `<div><p>Error Knapsack cannot contain items please enter weight greater or equal to your maximum weight</p><div>`
@@ -197,22 +200,18 @@ let arrForitemSelected = []
 selectIterms.innerHTML = provision.map(
   (item) =>
     `<option value=${item.Item}>${item.Item} ${item.Weight}Kg ${item.value}frs </option>`
-);
+)
 
 let selectedWeigth = document.getElementById('selectedWeigth')
 
 // add an event function to the select field to update addedweight and the items selected
 
 selectIterms.addEventListener('change', (event) => {
-  let itemName = event.target.value;
+  
+  let itemName = event.target.value
 
   // now we find in our provision where items name === the item seected
   let itemSelected = provision.find((item) => item.Item === itemName)
-
-  // if(addedWieght + itemSelected.Weight > +input){
-  //   alert("exeeded")
-  //   return
-  // }
 
   // update our knapsack iterms with the newly selected
   knapsackIterms.push(itemSelected)
