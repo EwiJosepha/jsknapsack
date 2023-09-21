@@ -137,7 +137,7 @@ function inputt () {
   finish.addEventListener('click', function updating () {
     if (addedWieght > input) {
       finish.style.backgroundColor = 'red'
-      div.innerHTML = `<div><p>Error Knapsack cannot contain items please enter weight greater or equal to your maximum weight</p><div>`
+      div.innerHTML = '<p>Error Knapsack cannot contain items please enter weight greater or equal to your maximum weight</P>'
       div.style.backgroundColor = 'red'
       div.style.width = '100%'
       div.style.padding = '20px'
@@ -182,7 +182,7 @@ const arrForitemSelected = []
 
 // selectIterms.innerHTML = provision.map((item) => `<option ${item.Weight} ${item.Item} ${item.Weight}Kg ${item.value}</option>`)
 // console.log(provision.map)
-const selectIterms =document.getElementById('selectIterms')
+const selectIterms = document.getElementById('selectIterms')
 selectIterms.innerHTML = provision.map(
   (item) =>
     `<option value=${item.Item}>${item.Item} ${item.Weight}Kg ${item.value}frs </option>`
@@ -190,9 +190,7 @@ selectIterms.innerHTML = provision.map(
 
 const selectedWeigth = document.getElementById('selectedWeigth')
 selectIterms.addEventListener('change', (event) => {
-
-  const itemName = event.target.value
-
+ const itemName = event.target.value
   // now we find in our provision where items name === the item seected
   const itemSelected = provision.find((item) => item.Item === itemName)
 
