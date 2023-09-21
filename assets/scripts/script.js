@@ -190,14 +190,14 @@ selectIterms.innerHTML = provision.map(
 
 const selectedWeigth = document.getElementById('selectedWeigth')
 selectIterms.addEventListener('change', (event) => {
- const itemName = event.target.value
+  const itemName = event.target.value
   // now we find in our provision where items name === the item seected
   const itemSelected = provision.find((item) => item.Item === itemName)
 
   // update our knapsack iterms with the newly selected
   knapsackIterms.push(itemSelected)
 
-  // here we update the addedweight by the wieght of item we selected
+  // here we update the addedweight by the wieght of item we select
 
   addedWieght = addedWieght + itemSelected.Weight
 
