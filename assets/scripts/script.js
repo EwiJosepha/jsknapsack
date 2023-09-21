@@ -1,23 +1,3 @@
-const rice = document.getElementById('rice')
-const salt = document.getElementById('salt')
-const milk = document.getElementById('milk')
-const oil = document.getElementById('oil')
-const garri = document.getElementById('garri')
-const beans = document.getElementById('beans')
-const tomatoes = document.getElementById('tomatoes')
-const grandnut = document.getElementById('grandnut')
-const cheese = document.getElementById('cheese')
-const butter = document.getElementById('butter')
-const parfumRice = document.getElementById('parfum-rice')
-const mayor = document.getElementById('oilmayor')
-const cotton = document.getElementById('cotton')
-const fish = document.getElementById('fish')
-const meat = document.getElementById('meat')
-const onoin = document.getElementById('onoin')
-const egusi = document.getElementById('egusi')
-const maise = document.getElementById('maise')
-const sugar = document.getElementById('sugar')
-const spaghetti = document.getElementById('spaghetti')
 const btn = document.getElementById('btn')
 const display = document.getElementById('output')
 const output = document.createElement('p')
@@ -31,106 +11,106 @@ const output = document.createElement('p')
 
 // let selectIterms = document.getElementById("selectIterms");
 
-let provision = [
+const provision = [
   {
     Item: 'Salt',
     Weight: 10,
-    value: 3500,
+    value: 3500
   },
   {
     Item: 'butter',
     Weight: 5,
-    value: 3500,
+    value: 3500
   },
   {
     Item: 'rice',
     Weight: 25,
-    value: 32000,
+    value: 32000
   },
   {
     Item: 'sugar',
     Weight: 3,
-    value: 3500,
+    value: 3500
   },
   {
     Item: 'oil',
     Weight: 5,
-    value: 7500,
+    value: 7500
   },
   {
     Item: 'oil-Mayor',
     Weight: 5,
-    value: 8500,
+    value: 8500
   },
   {
     Item: 'cotton',
     Weight: 50,
-    value: 50000,
+    value: 50000
   },
   {
     Item: 'milk',
     Weight: 6,
-    value: 10000,
+    value: 10000
   },
   {
     Item: 'Egusi',
     Weight: 5,
-    value: 30000,
+    value: 30000
   },
   {
     Item: 'Beans',
     Weight: 15,
-    value: 22000,
+    value: 22000
   },
   {
     Item: 'Tomatoes',
     Weight: 7,
-    value: 18000,
+    value: 18000
   },
   {
     Item: 'fish',
     Weight: 13,
-    value: 45000,
+    value: 45000
   },
   {
     Item: 'Meat',
     Weight: 8,
-    value: 30500,
+    value: 30500
   },
   {
     Item: 'maise',
     Weight: 6,
-    value: 5000,
+    value: 5000
   },
   {
     Item: 'spaghetti',
     Weight: 4,
-    value: 2000,
+    value: 2000
   },
   {
     Item: 'Purfum-Rice',
     Weight: 17,
-    value: 35000,
+    value: 35000
   },
   {
     Item: 'cheese',
     Weight: 8,
-    value: 8000,
+    value: 8000
   },
   {
     Item: 'onoin',
     Weight: 4,
-    value: 5000,
+    value: 5000
   },
   {
     Item: 'garri',
     Weight: 17,
-    value: 5000,
+    value: 5000
   },
   {
     Item: 'Grandnut',
     Weight: 9,
-    value: 15000,
+    value: 15000
   },
 ]
 
