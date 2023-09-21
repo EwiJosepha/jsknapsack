@@ -126,8 +126,6 @@ flex.append(p)
 // });
 
 const displayWeight = document.getElementById('weightdisplay')
-const input = document.getElementById('input-field').value
-
 function inputt () {
   const input = document.getElementById('input-field').value
   if (input === '') {
@@ -184,19 +182,16 @@ const arrForitemSelected = []
 
 // selectIterms.innerHTML = provision.map((item) => `<option ${item.Weight} ${item.Item} ${item.Weight}Kg ${item.value}</option>`)
 // console.log(provision.map)
-
+const selectIterms =document.getElementById('selectIterms')
 selectIterms.innerHTML = provision.map(
   (item) =>
     `<option value=${item.Item}>${item.Item} ${item.Weight}Kg ${item.value}frs </option>`
 )
 
-let selectedWeigth = document.getElementById('selectedWeigth')
-
-// add an event function to the select field to update addedweight and the items selected
-
+const selectedWeigth = document.getElementById('selectedWeigth')
 selectIterms.addEventListener('change', (event) => {
 
-  let itemName = event.target.value
+  const itemName = event.target.value
 
   // now we find in our provision where items name === the item seected
   const itemSelected = provision.find((item) => item.Item === itemName)
