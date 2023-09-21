@@ -150,43 +150,54 @@ flex.append(p);
 // });
 
 const displayWeight = document.getElementById("weightdisplay");
+const input = document.getElementById("input-field").value
 
 
 
 function inputt() {
-  const input = document.getElementById("input-field").value
-  addedWieght = ' '
+const input = document.getElementById("input-field").value
+
+  // addedWieght = addedWieght
   if (input === "") {
-    selectIterms = [];
+    // selectIterms = [];
     console.log("enter a max weight");
     display.innerHTML = "enter max weight first";
+    return
   }
 
   finish.addEventListener('click', function updating () {
-   
+
      if (addedWieght > input) {
       finish.style.backgroundColor = "red";
-      div.innerHTML = `<div><p>Error Knapsack cannot contain items please enter weight greater or equal to your maximum weight</p><div>`;
+      div.innerHTML = `<div><p>Error Knapsack cannot contain items please enter weight greater or equal to your maximum weight</p><div>`
       div.style.backgroundColor = "red";
       div.style.width = "100%";
       div.style.padding = "20px";
+      div.style.paddingBottom = "20px";
       div.style.fontSize = "25px";
       div.style.fontFamily = "sans-serif";
-      div.style.height = "120px";
+      div.style.height = "300px";
       div.style.overflow = 'scroll'
       div.style.border = "2px solid #fff";
       div.style.backgroundColor = "#ff0000";
-      div.innerHTML = ' '
-    } else  {
+      // div.innerHTML = ' '
+      return
+    }
+     else  {
       finish.style.backgroundColor = 'green'
       p.innerHTML =
         "THIS IS THE CAPACITY OF YOUR KNAPSACK" + " " + addedWieght + "kg";
       p.style.color = "green";
       p.style.fontSize = "25px";
       p.style.fontFamily = "25px";
+      p.style.paddingBottom = "20px";
+
+      
     }
+    addedWieght = ''
+
   })
-  
+
   displayWeight.innerHTML = "THIS IS YOUR MAX-WEIGHT" + " " + input + "Kg";
 
 }
@@ -194,7 +205,7 @@ function inputt() {
 // btn.addEventListener('click', input)
 
 done.addEventListener("click", () => {
-  inputt();
+inputt();
   //   arrForitemSelected = []
 });
 
@@ -215,15 +226,24 @@ let selectedWeigth = document.getElementById("selectedWeigth");
 // add an event function to the select field to update addedweight and the items selected
 
 selectIterms.addEventListener("change", (event) => {
+
+
   let itemName = event.target.value;
+
   // now we find in our provision where items name === the item seected
   let itemSelected = provision.find((item) => item.Item === itemName);
-
+  
+  // if(addedWieght + itemSelected.Weight > +input){
+  //   alert("exeeded")
+  //   return
+  // }
+  
   // update our knapsack iterms with the newly selected
   knapsackIterms.push(itemSelected);
 
   // here we update the addedweight by the wieght of item we selected
-  addedWieght = addedWieght + itemSelected.Weight;
+  addedWieght = addedWieght + itemSelected.Weight
+  
 
   // display the added weigth
   selectedWeigth.innerText = addedWieght;
