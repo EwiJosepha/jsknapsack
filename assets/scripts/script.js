@@ -1,7 +1,4 @@
-const btn = document.getElementById('btn')
 const display = document.getElementById('output')
-const output = document.createElement('p')
-
 // display.append(output)
 // function input () {
 //   const inputfield= document.getElementById("input-field").value
@@ -111,16 +108,14 @@ const provision = [
     Item: 'Grandnut',
     Weight: 9,
     value: 15000
-  },
+  }
 ]
 
 const done = document.getElementById('done')
-const reset = document.getElementById('reset')
 const flex = document.querySelector('.flex')
 const finish = document.getElementById('btncomplete')
-const errordisplay = document.getElementById('errodisplay')
-let div = document.createElement('div')
-let p = document.createElement('p')
+const div = document.createElement('div')
+const p = document.createElement('p')
 
 flex.append(div)
 flex.append(p)
@@ -131,17 +126,11 @@ flex.append(p)
 // });
 
 const displayWeight = document.getElementById('weightdisplay')
-let input = document.getElementById('input-field').value
+const input = document.getElementById('input-field').value
 
 function inputt () {
-  const input = document.getElementById('input-field').value;
-
-  // addedWieght = ' '
-
+  const input = document.getElementById('input-field').value
   if (input === '') {
-
-    // selectIterms = []
-
     console.log('enter a max weight')
     display.innerHTML = 'enter max weight first'
     return
@@ -160,7 +149,6 @@ function inputt () {
       div.style.height = '300px'
       div.style.border = '2px solid #fff'
       div.style.backgroundColor = '#ff0000'
-      return
     } else if (input > addedWieght) {
       finish.style.backgroundColor = 'green'
       p.innerHTML =
@@ -180,7 +168,7 @@ function inputt () {
     }
   })
 
-  displayWeight.innerHTML = 'THIS IS YOUR MAX-WEIGHT' + ' '  + input + 'Kg'
+  displayWeight.innerHTML = 'THIS IS YOUR MAX-WEIGHT' + ' ' + input + 'Kg'
 }
 
 // btn.addEventListener('click', input)
@@ -190,9 +178,9 @@ done.addEventListener('click', () => {
   //   arrForitemSelected = []
 })
 
-let knapsackIterms = []
+const knapsackIterms = []
 let addedWieght = 0
-let arrForitemSelected = []
+const arrForitemSelected = []
 
 // selectIterms.innerHTML = provision.map((item) => `<option ${item.Weight} ${item.Item} ${item.Weight}Kg ${item.value}</option>`)
 // console.log(provision.map)
@@ -207,24 +195,23 @@ let selectedWeigth = document.getElementById('selectedWeigth')
 // add an event function to the select field to update addedweight and the items selected
 
 selectIterms.addEventListener('change', (event) => {
-  
+
   let itemName = event.target.value
 
   // now we find in our provision where items name === the item seected
-  let itemSelected = provision.find((item) => item.Item === itemName)
+  const itemSelected = provision.find((item) => item.Item === itemName)
 
   // update our knapsack iterms with the newly selected
   knapsackIterms.push(itemSelected)
 
   // here we update the addedweight by the wieght of item we selected
+
   addedWieght = addedWieght + itemSelected.Weight
 
   // display the added weigth
   selectedWeigth.innerText = addedWieght
-  let itemSelected2 = `<p>${itemSelected.Item} ${itemSelected.Weight}kg ${itemSelected.value}</p>
-`
+  const itemSelected2 = `<p>${itemSelected.Item} ${itemSelected.Weight}kg ${itemSelected.value}</p>`
   arrForitemSelected.push(itemSelected2)
-
   display.innerHTML = arrForitemSelected
 
   // document.getElementById("knapsackitems").innerHTML = knapsackIterms.map((itemSelected)=> {
@@ -233,6 +220,5 @@ selectIterms.addEventListener('change', (event) => {
   // });
 
   console.log('added items', knapsackIterms)
-
   console.log('selectect weight', event.target.value)
 })
