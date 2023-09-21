@@ -135,6 +135,7 @@ let provision = [
 ];
 
 const done = document.getElementById("done");
+const reset = document.getElementById("reset");
 const flex = document.querySelector(".flex");
 const finish = document.getElementById("btncomplete");
 const errordisplay = document.getElementById("errodisplay");
@@ -150,14 +151,14 @@ flex.append(p);
 // });
 
 const displayWeight = document.getElementById("weightdisplay");
-const input = document.getElementById("input-field").value
+let input = document.getElementById("input-field").value
 
 
 
 function inputt() {
 const input = document.getElementById("input-field").value
 
-  // addedWieght = addedWieght
+  // addedWieght = ' '
   if (input === "") {
     // selectIterms = [];
     console.log("enter a max weight");
@@ -180,8 +181,16 @@ const input = document.getElementById("input-field").value
       div.style.overflow = 'scroll'
       div.style.border = "2px solid #fff";
       div.style.backgroundColor = "#ff0000";
-      // div.innerHTML = ' '
       return
+    }
+    else if(input>addedWieght){
+      finish.style.backgroundColor = 'green'
+      p.innerHTML =
+        "THIS IS THE CAPACITY OF YOUR KNAPSACK" + " " + addedWieght + "kg";
+      p.style.color = "green";
+      p.style.fontSize = "25px";
+      p.style.fontFamily = "25px";
+      p.style.paddingBottom = "20px";
     }
      else  {
       finish.style.backgroundColor = 'green'
@@ -191,11 +200,14 @@ const input = document.getElementById("input-field").value
       p.style.fontSize = "25px";
       p.style.fontFamily = "25px";
       p.style.paddingBottom = "20px";
+  }
 
-      
-    }
-    addedWieght = ''
+  })
 
+  reset.addEventListener('click', ()=>{
+    // input = " "
+    // addedWieght=" "
+    
   })
 
   displayWeight.innerHTML = "THIS IS YOUR MAX-WEIGHT" + " " + input + "Kg";
@@ -262,3 +274,5 @@ selectIterms.addEventListener("change", (event) => {
 
   console.log(" selectect weight", event.target.value);
 });
+
+
