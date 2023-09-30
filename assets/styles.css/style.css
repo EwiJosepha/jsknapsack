@@ -8,7 +8,7 @@ body {
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
-  background-color: #fffffd;
+  background-color: #e1e1cb;
 }
 
 h1 {
@@ -70,8 +70,12 @@ h1 {
 
 #selectedWeigth {
   padding: 30px;
-  color: #ff0000;
+  color: #c50a0a;
   font-size: 28px;
+}
+
+#selectedWeight:hover {
+  background-color: #ece2e2;
 }
 
 #output {
